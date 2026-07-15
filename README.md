@@ -1,5 +1,3 @@
-Aquí tienes una propuesta de README.md estructurada, profesional y clara para tu proyecto.
-
 Proyecto PHP con Despliegue Automático vía Git
 Este proyecto permite levantar un entorno PHP (Apache) que clona automáticamente un repositorio privado al iniciar el contenedor. Ideal para entornos de desarrollo o despliegues rápidos donde se requiere sincronización inmediata con un repositorio remoto mediante SSH.
 
