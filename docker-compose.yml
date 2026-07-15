@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        PHP_VERSION: "8.3"
+    ports:
+      - "8080:80"
+    environment:
+      # Clave privada SSH en base64: base64 -w0 ~/.ssh/id_rsa
+      RSA_KEY: "${RSA_KEY:-}"
+      # URL SSH del repositorio a clonar, p. ej. git@bitbucket.example.com:equipo/proyecto.git
+      GIT_URL: "${GIT_URL:-}"
+    volumes:
+      # Opcional: persistir el código clonado entre reinicios
+      - app_code:/var/www/html
+
+volumes:
+  app_code:
